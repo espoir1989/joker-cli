@@ -1,6 +1,7 @@
 # joker-cli
 # 感谢动物乐园
 # 大赌哥出品
+### 欢迎使用我的邀请链接： [邀请链接](https://blockjoker.org/login?invite_code=dGArqUAeiSh-6iY2s7pfDDdU4JjnhH85VQBxSL7Krk8=)
 ### 1.运行hash计算工具
 ```
 java -jar /root/jokey.jar
