@@ -1,4 +1,6 @@
-# joker-cli 大赌哥出品
+# joker-cli
+# 感谢动物乐园
+# 大赌哥出品
 ### 1.运行hash计算工具
 ```
 java -jar /root/jokey.jar
