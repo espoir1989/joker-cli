@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务日志</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>任务日志</h1>
+    <pre>{{ logs }}</pre>
+    <a href="{{ url_for('index') }}">返回任务列表</a>
+</body>
+</html>
+

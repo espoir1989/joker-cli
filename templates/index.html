@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>任务管理</h1>
+    <form action="{{ url_for('add_task') }}" method="post">
+        <label for="authorization">Authorization:</label>
+        <input type="text" id="authorization" name="authorization" required>
+        <label for="cookie">Cookie:</label>
+        <input type="text" id="cookie" name="cookie" required>
+        <label for="cf_response">CF Response:</label>
+        <input type="text" id="cf_response" name="cf_response" required>
+        <button type="submit">添加任务</button>
+    </form>
+    <h2>任务列表</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                任务 ID: {{ task.id }} - {{ task.name }} - 状态: {{ task.status }}
+                <form action="{{ url_for('start', task_id=task.id) }}" method="post" style="display:inline;">
+                    <button type="submit">启动</button>
+                </form>
+                <form action="{{ url_for('stop', task_id=task.id) }}" method="post" style="display:inline;">
+                    <button type="submit">停止</button>
+                </form>
+                <form action="{{ url_for('delete', task_id=task.id) }}" method="post" style="display:inline;">
+                    <button type="submit">删除</button>
+                </form>
+                <a href="{{ url_for('logs', task_id=task.id) }}">查看日志</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

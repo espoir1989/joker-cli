@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Log</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Log for {{ filename }}</h1>
+        <div class="log-content">
+            {{ log_content }}
+        </div>
+        <a href="{{ url_for('index') }}">Back to Task Manager</a>
+    </div>
+</body>
+</html>
+
