@@ -55,7 +55,6 @@ def run_script(config_file, stop_event):
     }
 
     post_data = {
-        "cf_response": config.get('cf_response')
     }
 
 
