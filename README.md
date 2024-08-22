@@ -1,7 +1,7 @@
 # joker-cli
 ### 1.运行hash计算工具
 ```
-java -jar /root/jokey1.jar
+java -jar /root/jokey.jar
 ```
 
 ### 2.安装依赖
